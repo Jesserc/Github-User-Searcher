@@ -86,7 +86,7 @@ const GithubProvider = ({ children }) => {
 				isLoading,
 			}}
 		>
-			{children}
+		  {children}
 		</GithubContext.Provider>
 	);
 };
