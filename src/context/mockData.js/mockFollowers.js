@@ -1,0 +1,42 @@
+export default [
+  {
+    "login": "natachigram",
+    "id": 57095905,
+    "node_id": "MDQ6VXNlcjU3MDk1OTA1",
+    "avatar_url": "https://avatars.githubusercontent.com/u/57095905?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/natachigram",
+    "html_url": "https://github.com/natachigram",
+    "followers_url": "https://api.github.com/users/natachigram/followers",
+    "following_url": "https://api.github.com/users/natachigram/following{/other_user}",
+    "gists_url": "https://api.github.com/users/natachigram/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/natachigram/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/natachigram/subscriptions",
+    "organizations_url": "https://api.github.com/users/natachigram/orgs",
+    "repos_url": "https://api.github.com/users/natachigram/repos",
+    "events_url": "https://api.github.com/users/natachigram/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/natachigram/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  {
+    "login": "Softwareessa",
+    "id": 97784317,
+    "node_id": "U_kgDOBdQR_Q",
+    "avatar_url": "https://avatars.githubusercontent.com/u/97784317?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Softwareessa",
+    "html_url": "https://github.com/Softwareessa",
+    "followers_url": "https://api.github.com/users/Softwareessa/followers",
+    "following_url": "https://api.github.com/users/Softwareessa/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Softwareessa/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Softwareessa/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Softwareessa/subscriptions",
+    "organizations_url": "https://api.github.com/users/Softwareessa/orgs",
+    "repos_url": "https://api.github.com/users/Softwareessa/repos",
+    "events_url": "https://api.github.com/users/Softwareessa/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Softwareessa/received_events",
+    "type": "User",
+    "site_admin": false
+  }
+];
