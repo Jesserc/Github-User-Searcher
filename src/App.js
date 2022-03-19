@@ -2,27 +2,26 @@ import React from "react";
 import { Dashboard, Login, PrivateRoute, AuthWrapper, Error } from "./pages";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-function App () {
-  return (
-    <Router>
-      <Switch>
-        <Route path='/' exact={ true }>
-          <Dashboard></Dashboard>
-        </Route>
+function App() {
+	return (
+		<AuthWrapper>
+			<Router>
+				<Switch>
+					<PrivateRoute path="/" exact={true}>
+						<Dashboard />
+					</PrivateRoute>
 
+					<Route path="/Login" exact={true}>
+						<Login />
+					</Route>
 
-        <Route path='/Login' exact={ true }>
-          <Login />
-        </Route>
-
-
-        <Route path='*'>
-          <Error />
-        </Route>
-
-      </Switch>
-    </Router>
-  );
+					<Route path="*">
+						<Error />
+					</Route>
+				</Switch>
+			</Router>
+		</AuthWrapper>
+	);
 }
 
 export default App;
