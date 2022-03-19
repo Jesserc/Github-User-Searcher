@@ -15,7 +15,6 @@ const Search = () => {
 		//more logic
 		if (user) {
 			searchGithubUser(user);
-		} else {
 		}
 	};
 

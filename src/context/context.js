@@ -31,16 +31,34 @@ const GithubProvider = ({ children }) => {
 		// toggleError
 		if (response) {
 			setGithubUser(response.data);
-			const { login, followers_url } = response.data;
+			const { login, followers_url, repos_url } = response.data;
 
-			//fetching repos
-			axios(`${rootUrl}/users/${login}/repos?per_page=100`).then((response) =>
+			/* 	//fetching repos
+			axios(`${repos_url}?per_page=100`).then((response) =>
 				setRepos(response.data),
 			);
 			//fetching followers
 			axios(`${followers_url}?per_page=100`).then((response) =>
 				setFollowers(response.data),
-			);
+			); */
+
+			// used promise.allSettled to get all request(fetching respos and followers data) data at the same time and commented out the above api call --- both responses are same
+
+			await Promise.allSettled([
+				axios(`${repos_url}?per_page=100`),
+				axios(`${followers_url}?per_page=100`),
+			])
+				.then((results) => {
+					const [repos, followers] = results;
+					const status = "fulfilled";
+					if (repos.status === status) {
+						setRepos(repos.value.data);
+					}
+					if (followers.status === status) {
+						setFollowers(followers.value.data);
+					}
+				})
+				.catch((err) => console.log(err));
 		} else {
 			toggleError(true, "sorry, user not found");
 		}
